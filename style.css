@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.container {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* margin 0 auto is used for placing the content in the center  */
+  padding: 20px;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: white;
+  background-color: blue;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex warp no warp is used for placing the image vertically because the default value is horizontal */
+  justify-content: space-between;
+  /* it is used for to create space between two images */
+}
+
+.simran {
+  width: 32%;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  /* borer radius is used for making the image corner round type */
+  overflow: hidden;
+  
+}
+
+.simran img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  /* filter is used for making the images black and white */
+  box-shadow: 0 0 20px #333;
+  object-fit: cover;
+  border: 3px solid black;
+}
+.simran :hover {
+  transform: scale(1.04);
+  transition: 0.4s;
+  filter: drop-shadow(0 0 10px #333);
+}
+.simran :hover img {
+  filter: grayscale(0%);
+}
+
+.simran figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  padding: 25%;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  opacity: 0;
+
+  /* opacity is used for to control the visibility the text color  */
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255));
+  transition: 0.4s;
+}
+.simran:hover figcaption {
+  opacity: 1;
+  transform: scale(1.03);
+}
